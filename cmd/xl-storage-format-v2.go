@@ -966,6 +966,7 @@ func (j xlMetaV2DeleteMarker) ToFileInfo(volume, path string) (FileInfo, error) 
 		VersionID: versionID,
 		Deleted:   true,
 	}
+
 	fi.ReplicationState = GetInternalReplicationState(j.MetaSys)
 
 	if j.FreeVersion() {
